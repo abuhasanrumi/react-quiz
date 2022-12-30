@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Checkbox({ text, ...rest }) {
+function Checkbox({ className, text, ...rest }) {
     return (
-        <label>
-            <input {...rest} />
+        <label className={className}>
+            <input type="checkbox" {...rest} />
             <span>{text}</span>
         </label>
     )

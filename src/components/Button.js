@@ -1,10 +1,10 @@
 import React from 'react'
 import classes from "../styles/Button.module.css"
 
-function Button({ text }) {
+function Button({ className, children }) {
     return (
-        <div className={classes.button}>
-            <span>{text}</span>
+        <div className={`${classes.button} ${className}`}>
+            {children}
         </div>
     )
 }

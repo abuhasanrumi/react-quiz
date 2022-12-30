@@ -19,7 +19,7 @@ function Signup() {
                     <TextInput type="password" placeholder="Enter password" icon="lock" />
                     <TextInput type="password" placeholder="Confirm password" icon="lock_clock" />
                     <Checkbox type="checkbox" text=" I agree to the Terms & Conditions" />
-                    <Button text="Submit now" />
+                    <Button><span>Submit now</span></Button>
                     <div class="info">
                         Already have an account? <a href="login.html">Login</a> instead.
                     </div>

@@ -15,7 +15,7 @@ function Login() {
                 <Form className={classes.login}>
                     <TextInput type="text" placeholder="Enter email" icon="alternate_email" />
                     <TextInput type="password" placeholder="Enter password" icon="lock" />
-                    <Button text="Submit now" />
+                    <Button><span>Submit now</span></Button>
                     <div class="info">Don't have an account? <a href="signup.html">Signup</a> instead.</div>
                 </Form>
             </div>
