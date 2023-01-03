@@ -45,9 +45,9 @@ function SignupForm() {
             <TextInput type="text" placeholder="Enter email" icon="alternate_email" required value={email} onChange={(e) => setEmail(e.target.value)} />
             <TextInput type="password" placeholder="Enter password" icon="lock" required value={password} onChange={(e) => setPassword(e.target.value)} />
             <TextInput type="password" placeholder="Confirm password" icon="lock_clock" required value={confirmPassword} onChange={(e) => setconfirmPassword(e.target.value)} />
-            {error && <p className='error'>{error}</p>}
             <Checkbox type="checkbox" text=" I agree to the Terms & Conditions" required value={agree} onChange={(e) => setAgree(e.target.value)} />
-            <Button type="submit" disabled={loading}><span>Submit now</span></Button>
+            <Button type="submit" disabled={loading}><span>Sign Up</span></Button>
+            {error && <p className='error'>{error}</p>}
             <div className="info">
                 Already have an account? <Link to="/login">Login</Link> instead.
             </div>
