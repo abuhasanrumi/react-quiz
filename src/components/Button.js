@@ -3,9 +3,9 @@ import classes from "../styles/Button.module.css"
 
 function Button({ className, children }) {
     return (
-        <div className={`${classes.button} ${className}`}>
+        <button className={`${classes.button} ${className}`}>
             {children}
-        </div>
+        </button>
     )
 }
 
