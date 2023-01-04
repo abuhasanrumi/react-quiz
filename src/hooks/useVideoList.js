@@ -5,6 +5,7 @@ function useVideoList(page) {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
     const [videos, setVideos] = useState([])
+    const [hasMore, setHasMore] = useState(true)
     useEffect(() => {
         async function fetchVideos() {
             const db = getDatabase();
@@ -28,7 +29,7 @@ function useVideoList(page) {
 
                     })
                 } else {
-                    //
+                    setHasMore(false)
                 }
 
             } catch (err) {
@@ -41,7 +42,7 @@ function useVideoList(page) {
     }, [page])
 
     return {
-        loading, error, videos
+        loading, error, videos, hasMore
     }
 
 }
