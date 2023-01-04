@@ -1,19 +1,15 @@
 import React from 'react';
-import thumbnail from "../assets/images/3.jpg";
 import classes from "../styles/Video.module.css";
 
-function Video() {
+function Video({ title, id, noq }) {
     return (
-        // <Link to="/quiz">
-
-        // </Link >
 
         <div className={classes.video}>
-            <img src={thumbnail} alt="" />
-            <p>#23 React Hooks Bangla - React useReducer hook Bangla</p>
+            <img src={`http://img.youtube.com/vi/${id}/maxresdefault.jpg`} alt={title} />
+            <p>{title}</p>
             <div className={classes.qmeta}>
-                <p>10 Questions</p>
-                <p>Score : Not taken yet</p>
+                <p>{noq} Questions</p>
+                <p>Score: {noq * 5}</p>
             </div>
         </div>
     )
