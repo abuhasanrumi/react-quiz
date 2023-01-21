@@ -2,16 +2,16 @@ import React from 'react';
 import classes from "../styles/Questions.module.css";
 import Answers from './Answers';
 
-function Question() {
-    return (
-        <div className={classes.question}>
+function Questions({ answers = [] }) {
+    return answers.map((answer, index) => (
+        <div className={classes.question} key={index}>
             <div className={classes.qtitle}>
                 <span className="material-icons-outlined"> help_outline </span>
-                Here goes the question from Learn with Sumit?
+                {answer.title}
             </div>
-            <Answers />
+            <Answers input={false} options={answer.options} />
         </div>
-    )
+    ))
 }
 
-export default Question
+export default Questions

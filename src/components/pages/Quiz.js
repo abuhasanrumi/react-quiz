@@ -83,12 +83,14 @@ function Quiz() {
             [id]: qna
         });
 
-        history(`/result/${id}`, {
+        history(
+            `/result/${id}`, {
             state: {
                 qna,
             }
         })
     }
+
 
     return (
         <>
@@ -98,7 +100,7 @@ function Quiz() {
                 <>
                     <h1>{qna[currentQuestion].title}</h1>
                     <h4>Question can have multiple answers</h4>
-                    <Answers options={qna[currentQuestion].options} handleChange={handleAnswerChange} />
+                    <Answers input={true} options={qna[currentQuestion].options} handleChange={handleAnswerChange} />
                     <ProgressBar next={nextQuestion} prev={prevQuestion} submit={handleSubmit} progress={percentage} />
                     <MiniPlayer />
                 </>
